@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/colorWhite"
+    tools:context=".login.LoginActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_line_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_line_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_line_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20"
+        app:layout_constraintTop_toBottomOf="parent"
+        />
+    <TextView
+        android:id="@+id/tvAuthentication"
+        style="@style/LoginTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Authentication"
+        app:layout_constraintLeft_toRightOf="@id/guide_line_left"
+        app:layout_constraintTop_toBottomOf="@id/guide_line_top"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/shape_edit_text"
+        app:layout_constraintLeft_toRightOf="@id/guide_line_left"
+        app:layout_constraintRight_toLeftOf="@id/guide_line_right"
+        app:layout_constraintTop_toBottomOf="@+id/tvAuthentication">
+
+        <EditText
+            android:id="@+id/edt_user_name"
+            style="@style/LoginTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="User Name"
+            android:textSize="16sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilPassWord"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_edit_text"
+        app:layout_constraintLeft_toRightOf="@id/guide_line_left"
+        app:layout_constraintRight_toLeftOf="@id/guide_line_right"
+        app:layout_constraintTop_toBottomOf="@+id/tilUserName"
+        tools:ignore="NotSibling">
+
+        <EditText
+            android:id="@+id/edt_pass_word"
+            style="@style/LoginTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textSize="16sp" />
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+        android:id="@+id/tv_forgot_pass_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/guide_line_right"
+        app:layout_constraintTop_toBottomOf="@id/tilPassWord"
+        android:layout_marginTop="16dp"
+        android:text="Forgot PassWord ?"
+        android:textStyle="normal"
+        />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="login"
+        style="@style/LoginTextStyle"
+        android:textColor="#ffffff"
+        android:typeface="serif"
+        app:layout_constraintTop_toBottomOf="@id/tv_forgot_pass_word"
+        app:layout_constraintLeft_toRightOf="@id/guide_line_left"
+        app:layout_constraintRight_toLeftOf="@id/guide_line_right"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_button"
+        />
+</android.support.constraint.ConstraintLayout>
